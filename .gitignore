@@ -1,7 +1,6 @@
 models/pretrained/*.pth
 datasets/CUB_200_2011/images/*/
 models/*.pth
-.gitignore
 .idea
 *.DS_Store
 *__init__.py
