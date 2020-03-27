@@ -1,4 +1,7 @@
-/datasets/CUB_200_2011/images/*
-/models/pretrained/*
+/datasets/CUB_200_2011/images/
+/models/pretrained/
 /models/*.pth
+*/.DS_Store
+*/__init__.py
+*/__pycache__
 
