@@ -1,6 +1,6 @@
 # TBMSL-Net
 
-This is a PyTorch implementation of the paper "Three-branch and Mutil-scale learning for Fine-grained Image Recognition (TBMSL-Net)" (Fan Zhang, Guisheng Zhai, Meng Li, Yizhao Liu).
+This is a PyTorch implementation of the paper ["Three-branch and Mutil-scale learning for Fine-grained Image Recognition (TBMSL-Net)"](https://arxiv.org/abs/2003.09150) (Fan Zhang, Guisheng Zhai, Meng Li, Yizhao Liu). Welcome to discuss with us in issues!
 
 ![avatar](./network.png)
 
