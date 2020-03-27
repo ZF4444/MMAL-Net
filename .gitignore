@@ -1,5 +1,5 @@
-models/pretrained/
-datasets/CUB_200_2011/images/
+models/pretrained/*.pth
+datasets/CUB_200_2011/images/*/
 models/*.pth
 .gitignore
 .idea
