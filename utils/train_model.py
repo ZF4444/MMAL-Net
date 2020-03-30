@@ -54,7 +54,7 @@ def train(model,
 
         # evaluation every epoch
         if eval_trainset:
-            raw_loss_avg, windowscls_loss_avg, total_loss_avg, raw_accuracy, local_accuracy, local_loss_avg, _\
+            raw_loss_avg, windowscls_loss_avg, total_loss_avg, raw_accuracy, local_accuracy, local_loss_avg\
                 = eval(model, trainloader, criterion, 'train', save_path, epoch)
 
             print(
@@ -73,14 +73,9 @@ def train(model,
                 writer.add_scalar('Train/total_loss_avg', total_loss_avg, epoch)
 
         # eval testset
-        if epoch == 1:
-            raw_loss_avg, windowscls_loss_avg, total_loss_avg, raw_accuracy, local_accuracy, \
-            local_loss_avg, coor_1epoch\
-                = eval(model, testloader, criterion, 'test', save_path, epoch)
-        else:
-            raw_loss_avg, windowscls_loss_avg, total_loss_avg, raw_accuracy, local_accuracy, \
-            local_loss_avg, _\
-                = eval(model, testloader, criterion, 'test', save_path, epoch)
+        raw_loss_avg, windowscls_loss_avg, total_loss_avg, raw_accuracy, local_accuracy, \
+        local_loss_avg\
+            = eval(model, testloader, criterion, 'test', save_path, epoch)
 
         print(
             'Test set: raw accuracy: {:.2f}%, local accuracy: {:.2f}%'.format(
