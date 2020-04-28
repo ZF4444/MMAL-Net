@@ -15,19 +15,17 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 CUDA = torch.cuda.is_available()
 DEVICE = torch.device("cuda" if CUDA else "cpu")
 
-# model path
-pth_path = "./models/cub_epoch144.pth"
-
 # dataset
-set = 'CUB'
+set = 'Aircraft'
 if set == 'CUB':
     root = './datasets/CUB_200_2011'  # dataset path
+    # model path
+    pth_path = "./models/cub_epoch144.pth"
     num_classes = 200
-elif set == 'CAR':
-    root = './datasets/Stanford_Cars'  # dataset path
-    num_classes = 196
 elif set == 'Aircraft':
     root = './datasets/FGVC-aircraft'  # dataset path
+    # model path
+    pth_path = "./models/air_epoch146.pth"
     num_classes = 100
 
 batch_size = 10
@@ -63,7 +61,6 @@ with torch.no_grad():
         # local
         pred = local_logits.max(1, keepdim=True)[1]
         object_correct += pred.eq(y.view_as(pred)).sum().item()
-        break
 
     print('\nObject branch accuracy: {}/{} ({:.2f}%)\n'.format(
             object_correct, len(testloader.dataset), 100. * object_correct / len(testloader.dataset)))
