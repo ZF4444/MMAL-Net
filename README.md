@@ -1,13 +1,13 @@
 # TBMSL-Net
 
-This is a PyTorch implementation of the paper ["Three-branch and Mutil-scale learning for Fine-grained Image Recognition (TBMSL-Net)"](https://arxiv.org/abs/2003.09150) (Fan Zhang, Guisheng Zhai, Meng Li, Yizhao Liu). Welcome to discuss with us in issues!
+This is a PyTorch implementation of the paper ["Multi-branch and Multi-scale Attention Learning for Fine-Grained Visual Categorization (MMAL-Net)"](https://arxiv.org/abs/2003.09150) (Fan Zhang, Meng Li, Guisheng Zhai, Yizhao Liu). Welcome to discuss with us in issues!
 
 ![avatar](./network.png)
 
 ### Table of Contents
 - <a href='#requirements'>Requirements</a>
 - <a href='#datasets'>Datasets</a>
-- <a href='#training TBMSL-Net'>Training TBMSL-Net</a>
+- <a href='#training L-Net'>Training MMAL-Net</a>
 - <a href='#evaluation'>Evaluation</a>
 - <a href='#model'>Model</a>
 - <a href='#reference'>Reference</a>
@@ -32,10 +32,10 @@ Download the [FGVC-Aircraft](http://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/
 You can also try other fine-grained datasets. 
 
 ## Training TBMSL-Net
-If you want to train the TBMSL-Net, please download the pretrained model of [ResNet-50](https://drive.google.com/open?id=1raU0m3zA52dh5ayQc3kB-7Ddusa0lOT-) and move it to **models/pretrained** before run ``python train.py``. You may need to change the configurations in ``config.py`` if your GPU memory is not enough. The parameter ``N_list`` is ``N1, N2, N3`` in the original paper and you can adjust them according to GPU memory. During training, the log file and checkpoint file will be saved in ``model_path`` directory. 
+If you want to train the MMAL-Net, please download the pretrained model of [ResNet-50](https://drive.google.com/open?id=1raU0m3zA52dh5ayQc3kB-7Ddusa0lOT-) and move it to **models/pretrained** before run ``python train.py``. You may need to change the configurations in ``config.py`` if your GPU memory is not enough. The parameter ``N_list`` is ``N1, N2, N3`` in the original paper and you can adjust them according to GPU memory. During training, the log file and checkpoint file will be saved in ``model_path`` directory. 
 
 ## Evaluation
-If you want to test the TBMSL-Net, just run ``python test.py``. You need to specify the ``model_path`` in ``test.py`` to choose the checkpoint model for testing.
+If you want to test the MMAL-Net, just run ``python test.py``. You need to specify the ``model_path`` in ``test.py`` to choose the checkpoint model for testing.
 
 ## Model
 We also provide the checkpoint model trained by ourselves, you can download if from [Google Drive](https://drive.google.com/open?id=13ANynWz7O3QK0RdL4KqASW8X_vMb6V4B) for **CUB-200-2011** or download from [here](https://drive.google.com/open?id=1SYJHBVuG2uBlUROVrOCw2cpAKI2sWcOi) for **FGVC-Aircraft**. If you test on our provided model, you will get 89.6% and 94.5% test accuracy, respectively.

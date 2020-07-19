@@ -16,7 +16,7 @@ CUDA = torch.cuda.is_available()
 DEVICE = torch.device("cuda" if CUDA else "cpu")
 
 # dataset
-set = 'Aircraft'
+set = 'CUB'
 if set == 'CUB':
     root = './datasets/CUB_200_2011'  # dataset path
     # model path

@@ -59,6 +59,8 @@ class CUB():
 
             img = transforms.Resize((self.input_size, self.input_size), Image.BILINEAR)(img)
             img = transforms.RandomHorizontalFlip()(img)
+            img = transforms.ColorJitter(brightness=0.2, contrast=0.2)(img)
+
             img = transforms.ToTensor()(img)
             img = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])(img)
 
@@ -119,6 +121,8 @@ class STANFORD_CAR():
             # img = transforms.RandomResizedCrop(size=self.input_size,scale=(0.4, 0.75),ratio=(0.5,1.5))(img)
             # img = transforms.RandomCrop(self.input_size)(img)
             img = transforms.RandomHorizontalFlip()(img)
+            img = transforms.ColorJitter(brightness=0.2, contrast=0.2)(img)
+
             img = transforms.ToTensor()(img)
             img = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])(img)
 
@@ -170,6 +174,8 @@ class FGVC_aircraft():
             # img = transforms.RandomResizedCrop(size=self.input_size,scale=(0.4, 0.75),ratio=(0.5,1.5))(img)
             # img = transforms.RandomCrop(self.input_size)(img)
             img = transforms.RandomHorizontalFlip()(img)
+            img = transforms.ColorJitter(brightness=0.2, contrast=0.2)(img)
+
             img = transforms.ToTensor()(img)
             img = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])(img)
 
