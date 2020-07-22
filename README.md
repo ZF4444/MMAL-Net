@@ -38,15 +38,15 @@ If you want to train the MMAL-Net, please download the pretrained model of [ResN
 If you want to test the MMAL-Net, just run ``python test.py``. You need to specify the ``model_path`` in ``test.py`` to choose the checkpoint model for testing.
 
 ## Model
-We also provide the checkpoint model trained by ourselves, you can download if from [Google Drive](https://drive.google.com/open?id=13ANynWz7O3QK0RdL4KqASW8X_vMb6V4B) for **CUB-200-2011** or download from [here](https://drive.google.com/open?id=1SYJHBVuG2uBlUROVrOCw2cpAKI2sWcOi) for **FGVC-Aircraft**. If you test on our provided model, you will get 89.6% and 94.5% test accuracy, respectively.
+We also provide the checkpoint model trained by ourselves, you can download if from [Google Drive](https://drive.google.com/open?id=13ANynWz7O3QK0RdL4KqASW8X_vMb6V4B) for **CUB-200-2011** or download from [here](https://drive.google.com/open?id=1SYJHBVuG2uBlUROVrOCw2cpAKI2sWcOi) for **FGVC-Aircraft**. If you test on our provided model, you will get 89.6% and 94.7% test accuracy, respectively.
 
 ## Reference
 If you are interested in our work and want to cite it, please acknowledge the following paper:
 
 ```
 @misc{zhang2020threebranch,
-    title={Three-branch and Mutil-scale learning for Fine-grained Image Recognition (TBMSL-Net)},
-    author={Fan Zhang and Guisheng Zhai and Meng Li and Yizhao Liu},
+    title={Multi-branch and Multi-scale Attention Learning for Fine-Grained Visual Categorization},
+    author={Fan Zhang and Meng Li and Guisheng Zhai and Yizhao Liu},
     year={2020},
     eprint={2003.09150},
     archivePrefix={arXiv},
