@@ -1,4 +1,4 @@
-# TBMSL-Net
+# MMAL-Net
 
 This is a PyTorch implementation of the paper ["Multi-branch and Multi-scale Attention Learning for Fine-Grained Visual Categorization (MMAL-Net)"](https://arxiv.org/abs/2003.09150) (Fan Zhang, Meng Li, Guisheng Zhai, Yizhao Liu). Welcome to discuss with us in issues!
 
